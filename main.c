@@ -22,7 +22,7 @@ typedef struct patient PATIENT;
 
 int ajout (PATIENT* tab_patient,int* n){
 	PATIENT* p;
-	tab_patient = (PATIENT*) realloc(tab_patient,sizeof(PATIENT));
+	tab_patient = (PATIENT*) realloc(tab_patient,((*n)+1)*sizeof(PATIENT));
 	if(!tab_patient) exit(-1);
 	printf("p = tab+(%d) \n",(*n));
 	p = (tab_patient+(*n));
